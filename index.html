@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevoCare | Transforming Healthcare with Technology</title>
+    <meta name="description"
+        content="DevoCare connects patients and doctors through advanced digital healthcare solutions. Personalized care programs and practice management tools.">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo-container">
+                    <a href="#">
+                        <img src="images/logo.png" alt="DevoCare Logo" class="logo-img">
+                    </a>
+                </div>
+
+                <div class="nav-links">
+                    <a href="#individuals" class="nav-link">For Individuals</a>
+                    <a href="#professionals" class="nav-link">For Doctors</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#login" class="btn btn-primary">Login</a>
+                </div>
+
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Transforming Healthcare with <span>Technology</span></h1>
+                    <p class="hero-description">
+                        We bridge the gap between patients and doctors. Experience personalized care programs and
+                        efficient practice management solutions designed for the modern world.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#individuals" class="btn btn-primary">I am a Patient</a>
+                        <a href="#professionals" class="btn btn-secondary">I am a Doctor</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a placeholder/generative approach for visual structure, 
+                         in a real app this would be a high-quality illustration -->
+                    <div
+                        style="width: 100%; max-width: 500px; height: 350px; background: #e0eaff; border-radius: 20px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                        <i class="fas fa-heart-pulse" style="font-size: 8rem; color: rgba(0, 86, 179, 0.1);"></i>
+                        <div style="position: absolute; text-align: center;">
+                            <i class="fas fa-user-md"
+                                style="font-size: 4rem; color: var(--color-primary); margin-bottom: 20px;"></i>
+                            <div style="font-size: 1.2rem; font-weight: bold; color: var(--color-dark);">Connected Care
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Split Section -->
+    <section class="split-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Who We Serve</h2>
+            <p class="section-subtitle">Tailored solutions for every step of the healthcare journey.</p>
+
+            <div class="split-grid">
+                <!-- For Individuals -->
+                <article class="audience-card card-patient" id="individuals">
+                    <h3>For Individuals</h3>
+                    <p style="margin-bottom: 20px;">Take control of your health with our comprehensive care companion.
+                    </p>
+                    <ul>
+                        <li>Chronic Care Management</li>
+                        <li>Personalized Health Plans</li>
+                        <li>Medication Reminders</li>
+                        <li>Connect with Top Specialists</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Explore Patient App</a>
+                    <i class="fas fa-user-injured"
+                        style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
+                </article>
+
+                <!-- For Professionals -->
+                <article class="audience-card card-doctor" id="professionals">
+                    <h3>For Healthcare Professionals</h3>
+                    <p style="margin-bottom: 20px;">Digitize your practice and deliver exceptional patient outcomes.</p>
+                    <ul>
+                        <li>Practice Management System</li>
+                        <li>Digital Health Records (ABDM Ready)</li>
+                        <li>Patient Engagement Tools</li>
+                        <li>Clinical Analytics</li>
+                    </ul>
+                    <a href="#" class="btn btn-accent">Explore Practice Suite</a>
+                    <i class="fas fa-stethoscope"
+                        style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlights -->
+    <section class="features" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose DevoCare?</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Data Security</h4>
+                    <p>Your health data is encrypted and secure with the highest industry standards.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Easy Access</h4>
+                    <p>Access your reports, prescriptions, and appointments anytime, anywhere.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Community Support</h4>
+                    <p>Join a thriving community of health-conscious individuals and experts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 style="font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <div
+                            style="width: 30px; height: 30px; background: white; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-heart" style="color: var(--color-primary); font-size: 0.8rem;"></i>
+                        </div>
+                        DevoCare
+                    </h4>
+                    <p style="color: #ccc; margin-top: 10px;">Making every day better with digital healthcare
+                        innovation.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">News Room</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> support@devocare.com</li>
+                        <li><i class="fas fa-phone"></i> +91 99999 00000</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bangalore, India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 DevoCare Health Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
