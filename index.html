@@ -30,7 +30,7 @@
                     <a href="#our-products" class="nav-link">Products</a>
                     <a href="#about" class="nav-link">About Us</a>
                     <a href="#contact" class="nav-link">Contact</a>
-                    <a href="patient-app/index.html#/login" class="btn btn-primary">Login</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('patient')" class="btn btn-primary">Login</a>
                 </div>
 
                 <button class="mobile-menu-btn">
@@ -91,7 +91,8 @@
                         <li>Medication Reminders</li>
                         <li>Connect with Top Specialists</li>
                     </ul>
-                    <a href="patient-app/index.html" class="btn btn-primary">Explore Patient App</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('patient')" class="btn btn-primary">Explore Patient
+                        App</a>
                     <i class="fas fa-user-injured"
                         style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
                 </article>
@@ -106,7 +107,8 @@
                         <li>Patient Engagement Tools</li>
                         <li>Clinical Analytics</li>
                     </ul>
-                    <a href="go-emr/index.html" class="btn btn-accent">Explore Practice Suite</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('emr')" class="btn btn-accent">Explore Practice
+                        Suite</a>
                     <i class="fas fa-stethoscope"
                         style="position: absolute; bottom: -20px; right: -20px; font-size: 10rem; opacity: 0.1;"></i>
                 </article>
@@ -122,7 +124,7 @@
 
             <div class="features-grid">
                 <!-- Smart EMR -->
-                <a href="go-emr/index.html" class="feature-card"
+                <a href="javascript:void(0)" onclick="navigateTo('emr')" class="feature-card"
                     style="text-decoration: none; display: block; color: inherit;">
                     <div class="feature-icon">
                         <i class="fas fa-laptop-medical"></i>
@@ -132,7 +134,7 @@
                 </a>
 
                 <!-- Patient Portal -->
-                <a href="patient-app/index.html" class="feature-card"
+                <a href="javascript:void(0)" onclick="navigateTo('patient')" class="feature-card"
                     style="text-decoration: none; display: block; color: inherit;">
                     <div class="feature-icon">
                         <i class="fas fa-user-circle"></i>
@@ -255,6 +257,20 @@
         </div>
     </footer>
 
+    <script>
+        function navigateTo(app) {
+            const isLocal = window.location.protocol === 'file:';
+            let path = '';
+
+            if (app === 'patient') {
+                path = isLocal ? 'patient-app/dist/patient-portal/browser/index.html' : 'patient-app/index.html';
+            } else if (app === 'emr') {
+                path = isLocal ? 'go-emr/dist/index.html' : 'go-emr/index.html';
+            }
+
+            if (path) window.location.href = path;
+        }
+    </script>
     <script src="js/main.js"></script>
 </body>
 
