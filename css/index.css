@@ -3,24 +3,26 @@
 
 :root {
   /* Brand Colors */
-  --color-primary: #0056b3; /* Deep Blue from logo */
-  --color-accent: #4caf50;  /* Fresh Green from logo */
+  --color-primary: #0056b3;
+  /* Deep Blue from logo */
+  --color-accent: #4caf50;
+  /* Fresh Green from logo */
   --color-dark: #1a1a1a;
   --color-text: #4a4a4a;
   --color-light: #f8f9fa;
   --color-white: #ffffff;
-  
+
   /* Spacing */
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
-  
+
   /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
-  
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
   /* Transitions */
   --transition: all 0.3s ease;
 }
@@ -123,7 +125,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 320px;
 }
 
 .logo-container {
@@ -132,8 +134,9 @@ a {
 }
 
 .logo-img {
-  height: 50px;
+  height: 300px;
   width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -162,7 +165,7 @@ a {
 
 /* Hero Section */
 .hero {
-  padding-top: 140px;
+  padding-top: 360px;
   padding-bottom: 80px;
   background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
   position: relative;
@@ -249,7 +252,8 @@ a {
 }
 
 .card-patient {
-  background-color: #e3f2fd; /* Light Blue */
+  background-color: #e3f2fd;
+  /* Light Blue */
   color: var(--color-primary);
 }
 
@@ -258,7 +262,8 @@ a {
 }
 
 .card-doctor {
-  background-color: #e8f5e9; /* Light Green */
+  background-color: #e8f5e9;
+  /* Light Green */
   color: #2e7d32;
 }
 
@@ -338,7 +343,7 @@ a {
 .copyright {
   text-align: center;
   padding-top: var(--spacing-md);
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: #888;
 }
 
@@ -374,7 +379,7 @@ a {
   .hero-cta {
     justify-content: center;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
   }
