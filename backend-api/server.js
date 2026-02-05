@@ -24,6 +24,15 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/appointments', require('./routes/appointments'));
 app.use('/api/records', require('./routes/records'));
 
+// Base API Health Check
+app.get('/api', (req, res) => {
+    res.json({
+        status: 'success',
+        message: 'DevoCare API is operational',
+        endpoints: ['/auth', '/appointments', '/records']
+    });
+});
+
 app.get('/', (req, res) => {
     res.send('DevoCare Patient API is running');
 });

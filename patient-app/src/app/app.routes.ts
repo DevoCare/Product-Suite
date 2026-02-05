@@ -4,6 +4,7 @@ import { authGuard, mfaGuard, guestGuard } from './shared/utils';
 export const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'login', canActivate: [guestGuard], loadComponent: () => import('./auth/feature/login.component').then(m => m.LoginComponent) },
+  { path: 'register', canActivate: [guestGuard], loadComponent: () => import('./auth/feature/register.component').then(m => m.RegisterComponent) },
   { path: 'mfa', loadComponent: () => import('./auth/feature/mfa.component').then(m => m.MfaComponent) },
   {
     path: '',

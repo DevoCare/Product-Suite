@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
@@ -11,7 +12,7 @@ import { AuthService } from '../data-access';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, CardModule, InputTextModule, PasswordModule, ButtonModule, CheckboxModule],
+  imports: [CommonModule, FormsModule, RouterLink, CardModule, InputTextModule, PasswordModule, ButtonModule, CheckboxModule],
   template: `
     <div class="login-container">
       <p-card styleClass="login-card">
@@ -51,6 +52,11 @@ import { AuthService } from '../data-access';
 
           <button pButton label="Sign In" icon="pi pi-sign-in" class="w-full" [loading]="authService.isLoading()" (click)="login()"></button>
 
+          <div class="register-link">
+            <span>Don't have an account? </span>
+            <a routerLink="/register">Create Account</a>
+          </div>
+
           <div class="demo-credentials">
             <p><strong>Demo:</strong> patient&#64;demo.com / demo123</p>
             <button pButton label="Use Demo Account" class="p-button-text p-button-sm" (click)="useDemoCredentials()"></button>
@@ -86,7 +92,10 @@ import { AuthService } from '../data-access';
     .field label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
     .field-checkbox { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; }
     .error-message { background: var(--red-50); color: var(--red-700); padding: 0.75rem; border-radius: var(--border-radius); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
-    .demo-credentials { margin-top: 1.5rem; text-align: center; padding: 1rem; background: var(--surface-50); border-radius: var(--border-radius); }
+    .register-link { margin-top: 1.5rem; text-align: center; }
+    .register-link a { color: var(--teal-600); font-weight: 600; text-decoration: none; }
+    .register-link a:hover { text-decoration: underline; }
+    .demo-credentials { margin-top: 1rem; text-align: center; padding: 1rem; background: var(--surface-50); border-radius: var(--border-radius); }
     .demo-credentials p { margin: 0 0 0.5rem; font-size: 0.875rem; }
     .trust-badges { display: flex; justify-content: center; gap: 1.5rem; padding: 1rem; border-top: 1px solid var(--surface-border); }
     .trust-badges span { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--text-color-secondary); }
@@ -95,7 +104,7 @@ import { AuthService } from '../data-access';
 })
 export class LoginComponent {
   readonly authService = inject(AuthService);
-  
+
   email = '';
   password = '';
   rememberMe = false;
