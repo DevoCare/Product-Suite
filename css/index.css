@@ -65,6 +65,8 @@
   border-radius: 12px;
   transition: var(--transition);
   text-align: left;
+  margin-left: 0 !important;
+  /* Fix for aggressive nav-link margins if any */
 }
 
 .dropdown-item:hover {

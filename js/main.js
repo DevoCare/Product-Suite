@@ -50,9 +50,25 @@ function navigateTo(app) {
     }
 
     if (path) {
-        // Handle relative paths when on subpages
-        const depth = window.location.pathname.split('/').length - 2;
+        // Calculate depth more reliably
+        // On server: /about.html -> depth 0
+        // On local: D:/DevoCare/about.html -> depth 0 (relative to project root)
+
+        let depth = 0;
+        const pathname = window.location.pathname;
+
+        // If we are on about.html, abha.html, etc., depth is 0 relative to root
+        // If we were in a subfolder like 'features/security.html', depth would be 1
+
+        // Check if we are in the 'features' subfolder
+        if (pathname.includes('/features/')) {
+            depth = 1;
+        }
+
         const prefix = depth > 0 ? '../'.repeat(depth) : '';
-        window.location.href = prefix + path;
+        const finalUrl = prefix + path;
+
+        console.log('Navigating to:', finalUrl);
+        window.location.href = finalUrl;
     }
 }
