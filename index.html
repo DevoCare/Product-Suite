@@ -25,9 +25,9 @@
                 </div>
 
                 <div class="nav-links">
-                    <a href="#individuals" class="nav-link">For Individuals</a>
-                    <a href="#professionals" class="nav-link">For Doctors</a>
-                    <a href="#our-products" class="nav-link">Products</a>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="abha.html" class="nav-link">ABHA</a>
                     <a href="about.html" class="nav-link">About Us</a>
                     <a href="#contact" class="nav-link">Contact</a>
                     <a href="javascript:void(0)" onclick="navigateTo('patient')" class="btn btn-primary">Login</a>
@@ -218,6 +218,7 @@
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
+                        <li><a href="abha.html">ABHA Health ID</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Blog</a></li>
@@ -260,20 +261,6 @@
         </div>
     </footer>
 
-    <script>
-        function navigateTo(app) {
-            const isLocal = window.location.protocol === 'file:';
-            let path = '';
-
-            if (app === 'patient') {
-                path = isLocal ? 'patient-app/dist/patient-portal/browser/index.html' : 'patient-app/index.html';
-            } else if (app === 'emr') {
-                path = isLocal ? 'go-emr/dist/index.html' : 'go-emr/index.html';
-            }
-
-            if (path) window.location.href = path;
-        }
-    </script>
     <script src="js/main.js"></script>
 </body>
 

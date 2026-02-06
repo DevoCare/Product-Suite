@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            
+
             // Toggle icon from hamburger to close (optional visual feedback)
             const icon = mobileBtn.querySelector('i');
             if (navLinks.classList.contains('active')) {
@@ -38,3 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+function navigateTo(app) {
+    const isLocal = window.location.protocol === 'file:';
+    let path = '';
+
+    if (app === 'patient') {
+        path = isLocal ? 'patient-app/dist/patient-portal/browser/index.html' : 'patient-app/index.html';
+    } else if (app === 'emr') {
+        path = isLocal ? 'go-emr/dist/index.html' : 'go-emr/index.html';
+    }
+
+    if (path) {
+        // Handle relative paths when on subpages
+        const depth = window.location.pathname.split('/').length - 2;
+        const prefix = depth > 0 ? '../'.repeat(depth) : '';
+        window.location.href = prefix + path;
+    }
+}
