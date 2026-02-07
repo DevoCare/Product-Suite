@@ -44,8 +44,10 @@ Static marketing website with modern design and responsive layout.
 
 **Features:**
 - ✅ Modern glassmorphism UI design
+- ✅ **Accessibility Toolbar:** Text resize, Day/Night vision, Language selector
 - ✅ Premium dropdown navigation for Products
-- ✅ Official DevoCare branding
+- ✅ Official DevoCare branding with **transparent logo**
+- ✅ Refined "About Us" page with team insights
 - ✅ ABHA (Ayushman Bharat Health Account) integration info
 - ✅ Responsive across all devices
 
@@ -462,7 +464,16 @@ For support and inquiries:
 
 ## 🔄 Version History
 
-### v1.0.0 (Current)
+### v1.1.0 (Latest Updates - Feb 2026)
+- ✅ **Accessibility Toolbar:** Added text size controls, high-contrast night mode, and language selector.
+- ✅ **UI Refinements:**
+  - Transparent logo integration across all pages.
+  - "About Us" page layout improved with "Who We Are" visual storytelling.
+  - Homepage "Who We Serve" section updated with custom imagery.
+  - Enhanced button styling and spacing for a professional look.
+- ✅ **Code Quality:** Improved CSS organization and responsive adjustments.
+
+### v1.0.0 (Initial Release)
 - ✅ Main website with ABHA integration
 - ✅ Patient Portal with full feature set
 - ✅ Go-EMR landing pages
