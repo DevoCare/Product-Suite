@@ -1,0 +1,274 @@
+/* DevoCare ABHA Page Styles */
+
+.abha-hero {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.abha-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+}
+
+.abha-hero h1 span {
+    background: linear-gradient(135deg, #0056b3, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.abha-hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* ABHA Card Mockup */
+.abha-card-container {
+    margin-top: 60px;
+    perspective: 1000px;
+}
+
+.abha-card-mockup {
+    width: 450px;
+    height: 280px;
+    background: linear-gradient(135deg, #ffffff 0%, #f4f7fe 100%);
+    border-radius: 24px;
+    margin: 0 auto;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.abha-card-mockup:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+}
+
+.abha-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.abha-chip {
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(135deg, #ffd700, #daa520);
+    border-radius: 8px;
+}
+
+.abha-logo-small {
+    font-weight: 900;
+    color: #0056b3;
+    font-size: 1.2rem;
+}
+
+.abha-details {
+    display: flex;
+    gap: 25px;
+}
+
+.abha-photo {
+    width: 100px;
+    height: 120px;
+    background: #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #94a3b8;
+}
+
+.abha-info-text h4 {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.abha-info-text p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: 15px;
+}
+
+.abha-number {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: #0056b3;
+    margin-top: 20px;
+}
+
+/* Creation Steps */
+.creation-steps {
+    padding: 100px 0;
+    background: #fcfdfe;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.step-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 auto 25px;
+    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.3);
+}
+
+.step-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--color-dark);
+}
+
+.step-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Benefits Section */
+.abha-benefits {
+    padding: 100px 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    transition: var(--transition);
+    border: 1px solid #f0f0f0;
+}
+
+.benefit-item:hover {
+    box-shadow: var(--shadow-premium);
+    border-color: transparent;
+}
+
+.benefit-icon {
+    flex: 0 0 50px;
+    height: 50px;
+    background: #f0f4ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.benefit-text h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--color-dark);
+}
+
+.benefit-text p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Call to Action */
+.abha-cta {
+    padding: 100px 0;
+    background: var(--gradient-primary);
+    color: white;
+    text-align: center;
+}
+
+.abha-cta h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.btn-white {
+    background: white;
+    color: var(--color-primary);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn-white:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 991px) {
+    .steps-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .abha-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .abha-card-mockup {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
