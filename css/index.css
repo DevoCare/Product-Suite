@@ -25,6 +25,13 @@
 
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Accessibility */
+  --text-size-multiplier: 1;
+  --night-bg: #000000;
+  --night-text-primary: #FFD700;
+  --night-text-secondary: #FF69B4;
+  --night-accent: #00CED1;
 }
 
 /* Dropdown Menu Styles */
@@ -124,6 +131,202 @@
   transform: rotate(180deg);
 }
 
+/* Accessibility Toolbar */
+.accessibility-toolbar {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-bottom: 1px solid #e0e0e0;
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.accessibility-toolbar .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+}
+
+.text-size-controls {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.accessibility-btn {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.85rem;
+  color: var(--color-dark);
+  min-width: 38px;
+}
+
+.accessibility-btn:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 86, 179, 0.2);
+}
+
+.accessibility-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 86, 179, 0.2);
+}
+
+.vision-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.8rem;
+  color: var(--color-dark);
+}
+
+.vision-toggle:hover {
+  background: var(--color-dark);
+  color: white;
+  border-color: var(--color-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vision-toggle i {
+  font-size: 0.9rem;
+}
+
+.language-selector {
+  position: relative;
+}
+
+.language-selector select {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 28px 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 0.8rem;
+  color: var(--color-dark);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a1a1a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.language-selector select:hover {
+  border-color: var(--color-primary);
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 86, 179, 0.1);
+}
+
+/* Night Vision Mode */
+body.night-vision {
+  background-color: var(--night-bg) !important;
+  color: var(--night-text-primary) !important;
+}
+
+body.night-vision .header {
+  background-color: #1a1a1a !important;
+  box-shadow: 0 2px 15px rgba(255, 215, 0, 0.1);
+}
+
+body.night-vision .nav-link {
+  color: var(--night-text-primary) !important;
+}
+
+body.night-vision .nav-link:hover {
+  color: var(--night-accent) !important;
+}
+
+body.night-vision .hero {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+}
+
+body.night-vision .hero-title {
+  color: var(--night-text-primary) !important;
+}
+
+body.night-vision .hero-title span {
+  color: var(--night-text-secondary) !important;
+}
+
+body.night-vision .hero-description {
+  color: var(--night-text-primary) !important;
+}
+
+body.night-vision .section-title {
+  color: var(--night-text-primary) !important;
+}
+
+body.night-vision .section-subtitle,
+body.night-vision p {
+  color: var(--night-text-primary) !important;
+}
+
+body.night-vision .audience-card {
+  background-color: #1a1a1a !important;
+  color: var(--night-text-primary) !important;
+  border: 1px solid #333;
+}
+
+body.night-vision .features {
+  background-color: #0a0a0a !important;
+}
+
+body.night-vision .feature-card {
+  background-color: #1a1a1a !important;
+  color: var(--night-text-primary) !important;
+  border: 1px solid #333;
+}
+
+body.night-vision .feature-card h4 {
+  color: var(--night-text-secondary) !important;
+}
+
+body.night-vision .dropdown-menu {
+  background: rgba(26, 26, 26, 0.98) !important;
+  border: 1px solid #333;
+}
+
+body.night-vision .dropdown-item {
+  color: var(--night-text-primary) !important;
+}
+
+body.night-vision .dropdown-item:hover {
+  background: #2a2a2a !important;
+}
+
+body.night-vision .dropdown-item-content h5 {
+  color: var(--night-text-secondary) !important;
+}
+
+body.night-vision .dropdown-item-content p {
+  color: var(--night-text-primary) !important;
+}
+
+/* Text Size Control */
+html {
+  font-size: calc(16px * var(--text-size-multiplier));
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -214,7 +417,7 @@ a {
   box-shadow: var(--shadow-sm);
   position: fixed;
   width: 100%;
-  top: 0;
+  top: 42px;
   z-index: 1000;
 }
 
@@ -222,7 +425,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 180px;
+  height: 140px;
 }
 
 .logo-container {
@@ -231,9 +434,11 @@ a {
 }
 
 .logo-img {
-  height: 150px;
+  height: 120px;
   width: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
+  background: transparent;
 }
 
 .nav-links {
@@ -262,7 +467,7 @@ a {
 
 /* Hero Section */
 .hero {
-  padding-top: 220px;
+  padding-top: 222px;
   padding-bottom: 80px;
   background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
   position: relative;
@@ -456,6 +661,37 @@ a {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .accessibility-toolbar .container {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .text-size-controls {
+    gap: 4px;
+  }
+
+  .accessibility-btn {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    min-width: 40px;
+  }
+
+  .vision-toggle {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .vision-toggle span {
+    display: none;
+  }
+
+  .language-selector select {
+    font-size: 0.8rem;
+    padding: 6px 28px 6px 10px;
+  }
+
   .nav-links {
     position: absolute;
     top: 80px;

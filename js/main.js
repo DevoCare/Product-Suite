@@ -1,3 +1,119 @@
+// Accessibility Features
+(function () {
+    // Load saved preferences
+    function loadPreferences() {
+        const textSize = localStorage.getItem('devocare-text-size') || '1';
+        const nightVision = localStorage.getItem('devocare-night-vision') === 'true';
+        const language = localStorage.getItem('devocare-language') || 'en';
+
+        // Apply text size
+        document.documentElement.style.setProperty('--text-size-multiplier', textSize);
+        document.querySelectorAll('.text-size-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.size === textSize);
+        });
+
+        // Apply night vision
+        if (nightVision) {
+            document.body.classList.add('night-vision');
+            updateVisionToggle(true);
+        }
+
+        // Apply language
+        const languageSelector = document.getElementById('languageSelector');
+        if (languageSelector) {
+            languageSelector.value = language;
+        }
+    }
+
+    // Text Size Control
+    function initTextSizeControl() {
+        const textSizeBtns = document.querySelectorAll('.text-size-btn');
+
+        textSizeBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const size = this.dataset.size;
+
+                // Update active state
+                textSizeBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Apply size
+                document.documentElement.style.setProperty('--text-size-multiplier', size);
+
+                // Save preference
+                localStorage.setItem('devocare-text-size', size);
+            });
+        });
+    }
+
+    // Night Vision Toggle
+    function updateVisionToggle(isNightMode) {
+        const visionToggle = document.getElementById('visionToggle');
+        if (!visionToggle) return;
+
+        const icon = visionToggle.querySelector('i');
+        const text = visionToggle.querySelector('span');
+
+        if (isNightMode) {
+            // When night mode is active, show moon icon and "Night Vision" text
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            text.textContent = 'Night Vision';
+        } else {
+            // When day mode is active (default), show sun icon and "Day Vision" text
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            text.textContent = 'Day Vision';
+        }
+    }
+
+    function initNightVision() {
+        const visionToggle = document.getElementById('visionToggle');
+        if (!visionToggle) return;
+
+        visionToggle.addEventListener('click', function () {
+            const isNightMode = document.body.classList.toggle('night-vision');
+            updateVisionToggle(isNightMode);
+
+            // Save preference
+            localStorage.setItem('devocare-night-vision', isNightMode);
+        });
+    }
+
+    // Language Selector
+    function initLanguageSelector() {
+        const languageSelector = document.getElementById('languageSelector');
+
+        languageSelector.addEventListener('change', function () {
+            const selectedLanguage = this.value;
+
+            // Save preference
+            localStorage.setItem('devocare-language', selectedLanguage);
+
+            // In a real implementation, this would trigger translation
+            console.log('Language changed to:', selectedLanguage);
+
+            // For now, just show a notification (optional)
+            // You can implement actual translation in the future
+        });
+    }
+
+    // Initialize all accessibility features when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function () {
+            loadPreferences();
+            initTextSizeControl();
+            initNightVision();
+            initLanguageSelector();
+        });
+    } else {
+        loadPreferences();
+        initTextSizeControl();
+        initNightVision();
+        initLanguageSelector();
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');

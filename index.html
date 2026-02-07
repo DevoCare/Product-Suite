@@ -14,6 +14,36 @@
 
 <body>
 
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar">
+        <div class="container">
+            <div class="text-size-controls">
+                <button class="accessibility-btn text-size-btn" data-size="0.9" title="Decrease text size">-A</button>
+                <button class="accessibility-btn text-size-btn" data-size="1" title="Normal text size">A</button>
+                <button class="accessibility-btn text-size-btn active" data-size="1.15"
+                    title="Increase text size">A+</button>
+            </div>
+
+            <button class="vision-toggle" id="visionToggle" title="Toggle Day/Night Vision">
+                <i class="fas fa-sun"></i>
+                <span>Day Vision</span>
+            </button>
+
+            <div class="language-selector">
+                <select id="languageSelector" title="Select Language">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -94,7 +124,9 @@
     <!-- Audience Split Section -->
     <section class="split-section" id="products">
         <div class="container">
-            <h2 class="section-title">Who We Serve</h2>
+            <div style="text-align: center; margin-bottom: 20px;">
+                <img src="images/who-we-serve.png" alt="Who We Serve" style="max-width: 400px; height: auto;">
+            </div>
             <p class="section-subtitle">Tailored solutions for every step of the healthcare journey.</p>
 
             <div class="split-grid">
@@ -146,7 +178,7 @@
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h4>Data Security</h4>
+                    <h4 style="color: #FF8C00;">Data Security</h4>
                     <p>Your health data is encrypted and secure with the highest industry standards.</p>
                     <span
                         style="color: var(--color-primary); font-weight: 600; margin-top: 15px; display: inline-block;">Learn
@@ -158,7 +190,7 @@
                     <div class="feature-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h4>Easy Access</h4>
+                    <h4 style="color: #FF8C00;">Easy Access</h4>
                     <p>Access your reports, prescriptions, and appointments anytime, anywhere.</p>
                     <span
                         style="color: var(--color-primary); font-weight: 600; margin-top: 15px; display: inline-block;">Learn
@@ -170,7 +202,7 @@
                     <div class="feature-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h4>Community Support</h4>
+                    <h4 style="color: #FF8C00;">Community Support</h4>
                     <p>Join a thriving community of health-conscious individuals and experts.</p>
                     <span
                         style="color: var(--color-primary); font-weight: 600; margin-top: 15px; display: inline-block;">Learn

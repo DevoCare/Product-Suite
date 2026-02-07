@@ -181,6 +181,8 @@ body {
     height: 60px;
     width: auto;
     object-fit: contain;
+    mix-blend-mode: multiply;
+    background: transparent;
 }
 
 .nav-links {
