@@ -13,6 +13,7 @@ DevoCare/
 ├── 🌐 Main Website (Static HTML/CSS/JS)
 ├── 👥 Patient Portal (Angular 19)
 ├── 🏥 Go-EMR Portal (React 18 + Vite)
+├── 📦 Inventory Management (Angular 19)
 └── 🔌 Backend API (Node.js + Express + MongoDB)
 ```
 
@@ -174,7 +175,35 @@ npm run build          # Production build → dist/
 
 ---
 
-### 4. **Backend API** (`/backend-api`)
+### 4. **Inventory Management System** (`/go-emr-inventory`)
+Comprehensive medical equipment and inventory tracking system.
+
+```
+go-emr-inventory/
+├── src/app/
+│   ├── features/
+│   │   ├── dashboard/      # Real-time analytics
+│   │   ├── equipment/      # Device tracking
+│   │   ├── inventory/      # Stock management
+│   │   ├── maintenance/    # Service scheduling
+│   │   └── compliance/     # Regulatory compliance
+```
+
+**Tech Stack:**
+- **Framework:** Angular 19
+- **UI Library:** PrimeNG 19
+- **Features:** Equipment lifecycle, Smart reordering, Compliance tracking (HIPAA, ABHA)
+
+**Build & Deploy:**
+```bash
+cd go-emr-inventory
+npm install
+ng build             # Production build → dist/goemr-inventory/browser/
+```
+
+---
+
+### 5. **Backend API** (`/backend-api`)
 RESTful API server for patient portal authentication and data management.
 
 ```
