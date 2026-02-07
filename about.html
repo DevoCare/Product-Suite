@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DevoCare</title>
+    <meta name="description" content="Learn about DevoCare's mission to transform healthcare through technology.">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Simplified Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="DevoCare Logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <a href="#emr" class="nav-link has-dropdown">Products</a>
+                        <div class="dropdown-menu">
+                            <a href="javascript:void(0)" onclick="navigateTo('emr')" class="dropdown-item">
+                                <i class="fas fa-laptop-medical"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Smart EMR</h5>
+                                    <p>Digitize patient records with a click.</p>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" onclick="navigateTo('patient')" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Patient Portal</h5>
+                                    <p>Access health records anywhere.</p>
+                                </div>
+                            </a>
+                            <a href="#inventory" class="dropdown-item">
+                                <i class="fas fa-boxes"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Inventory Management</h5>
+                                    <p>Optimize stock & reduce wastage.</p>
+                                </div>
+                            </a>
+                            <a href="#portal" class="dropdown-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Clinic Analytics</h5>
+                                    <p>Data-driven insights for growth.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="abha.html" class="nav-link">ABHA</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>We are <span>DevoCare</span></h1>
+            <p>Driving the digital revolution in healthcare to make quality care accessible, efficient, and secure for
+                everyone, everywhere.</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Our Story</h2>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">DevoCare was born from a simple yet powerful
+                        observation: healthcare technology should empower doctors and patients, not complicate their
+                        lives.</p>
+                    <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">We saw clinical teams struggling with outdated
+                        systems and patients feeling disconnected from their own health data. We decided to build a
+                        bridge—a digital ecosystem that synchronizes care, secures data, and fosters community.</p>
+                    <p style="font-size: 1.1rem;">Today, DevoCare is a leading MedTech platform providing
+                        state-of-the-art EMR solutions and patient-centric portals that are redefining the healthcare
+                        experience.</p>
+                </div>
+                <div class="story-image">
+                    <i class="fas fa-hospital-user"
+                        style="font-size: 8rem; color: var(--color-primary); opacity: 0.2;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Suite Section - HIGH IMPACT REDESIGN -->
+    <section class="product-suite">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2
+                    style="font-size: 1rem; color: var(--color-primary); font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
+                    Our Solutions</h2>
+                <h3 style="font-size: 2.8rem; font-weight: 900; letter-spacing: -1px; line-height: 1.1;">Built for
+                    Modern <br>Care Providers</h3>
+            </div>
+
+            <!-- GO EMR Showcase -->
+            <div class="product-showcase" id="emr">
+                <div class="product-image-container">
+                    <img src="images/emr.jpg" alt="Go EMR Dashboard">
+                </div>
+                <div class="product-info">
+                    <span class="badge">Advanced Clinicals</span>
+                    <h2 class="title-emr">Go EMR</h2>
+                    <p>The next generation Electronic Medical Record system designed for clinicians who value speed,
+                        intelligence, and accuracy.</p>
+                    <ul class="product-features-list">
+                        <li><span class="pointer-dot dot-emr"></span> One-click Digital Prescriptions</li>
+                        <li><span class="pointer-dot dot-emr"></span> Smart Patient History Timeline</li>
+                        <li><span class="pointer-dot dot-emr"></span> Integrated Lab & Radiology Reports</li>
+                        <li><span class="pointer-dot dot-emr"></span> AI-Assisted Clinical Documentation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Inventory Showcase -->
+            <div class="product-showcase reverse" id="inventory">
+                <div class="product-image-container">
+                    <img src="images/inventory.jpg" alt="Inventory Management System">
+                </div>
+                <div class="product-info">
+                    <span class="badge">Operation Excellence</span>
+                    <h2 class="title-inventory">Medical Inventory Management</h2>
+                    <p>A comprehensive system to track, manage, and optimize clinical supplies and pharmacy stocks with
+                        zero leakage.</p>
+                    <ul class="product-features-list">
+                        <li><span class="pointer-dot dot-inventory"></span> Real-time Global Stock Tracking</li>
+                        <li><span class="pointer-dot dot-inventory"></span> Automated Smart Reorder Triggers</li>
+                        <li><span class="pointer-dot dot-inventory"></span> Expiry Date Alerts & Analytics</li>
+                        <li><span class="pointer-dot dot-inventory"></span> Multi-Location Supply Synchronization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Patient Portal Showcase -->
+            <div class="product-showcase" id="portal">
+                <div class="product-image-container">
+                    <img src="images/portal.png" alt="Patient Portal Interface">
+                </div>
+                <div class="product-info">
+                    <span class="badge">Patient Ownership</span>
+                    <h2 class="title-portal">Patient Portal</h2>
+                    <p>Giving patients complete ownership of their healthcare data through a seamless, mobile-first
+                        ecosystem.</p>
+                    <ul class="product-features-list">
+                        <li><span class="pointer-dot dot-portal"></span> Instant Access to Medical Records</li>
+                        <li><span class="pointer-dot dot-portal"></span> Zero-friction Appointment Booking</li>
+                        <li><span class="pointer-dot dot-portal"></span> Direct Messaging with Secure Protocols</li>
+                        <li><span class="pointer-dot dot-portal"></span> Health Trend Data Visualizations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="section">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mv-card">
+                    <div class="mv-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To become the world's most trusted healthcare operating system, where technology and human care
+                        blend seamlessly for the better health of humanity.</p>
+                </div>
+                <div class="mv-card">
+                    <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To equip healthcare providers with intelligent digital tools and provide patients with absolute
+                        control over their health journey through data and community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section" style="background-color: #fcfdfe;">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h4>Security First</h4>
+                    <p>Privacy is a right. We build every feature with ironclad 256-bit encryption at its core.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users-rays"></i>
+                    <h4>Patient-Centric</h4>
+                    <p>Every line of code we write is aimed at improving the clinical outcome for the person receiving
+                        care.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Innovation</h4>
+                    <p>We push the boundaries of what MedTech can do, integrating smart analytics for proactive care.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Universal Access</h4>
+                    <p>High-quality digital healthcare tools should be available to everyone, regardless of their
+                        location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-badges">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Join the Community</h2>
+            <p style="font-size: 1.1rem; opacity: 0.8;">Stay updated with our latest innovations and healthcare insights
+                on our social platforms.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/18Fb3Nt7j9/?mibextid=wwXIfr" target="_blank" class="social-link"
+                    title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/devocare_?igsh=MXZ3bjk0eDhyY2UyZw%3D%3D&utm_source=qr"
+                    target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/goemr/" target="_blank" class="social-link"
+                    title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="text-align: left;">
+                    <h4 style="font-size: 1.5rem; display: flex; align-items: center; gap: 10px;">
+                        <div
+                            style="width: 30px; height: 30px; background: white; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-heart" style="color: var(--color-primary); font-size: 0.8rem;"></i>
+                        </div>
+                        DevoCare
+                    </h4>
+                    <p style="color: #ccc; margin-top: 10px;">Making every day better with digital healthcare
+                        innovation.</p>
+                </div>
+
+                <div class="footer-col" style="text-align: left;">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="abha.html">ABHA Health ID</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">News Room</a></li>
+                    </ul>
+                    <div style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="https://www.facebook.com/share/18Fb3Nt7j9/?mibextid=wwXIfr" target="_blank"
+                            class="social-icon" style="color: white; font-size: 1.2rem;"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/devocare_?igsh=MXZ3bjk0eDhyY2UyZw%3D%3D&utm_source=qr"
+                            target="_blank" class="social-icon" style="color: white; font-size: 1.2rem;"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/goemr/" target="_blank" class="social-icon"
+                            style="color: white; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" style="text-align: left;">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" style="text-align: left;">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> connect@devocare.com</li>
+                        <li><i class="fas fa-phone"></i> +91 99999 00000</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Delhi India</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 DevoCare Health Solutions. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
