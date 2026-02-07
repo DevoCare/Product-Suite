@@ -75,31 +75,79 @@
             <p>Your unique Ayushman Bharat Health Account is the gateway to India's digital healthcare ecosystem.
                 Secure, portable, and built for your well-being.</p>
 
-            <div class="abha-card-container">
-                <div class="abha-card-mockup">
-                    <div class="abha-card-header">
-                        <div class="abha-chip"></div>
-                        <div class="abha-logo-small">ABHA | ABDM</div>
+            <div class="hero-content-grid">
+                <!-- Registration Form -->
+                <div class="hero-form-section">
+                    <div class="registration-card-hero">
+                        <h2 class="registration-title">Generate Your ABHA Number</h2>
+                        <p style="text-align: center; max-width: 600px; margin: -20px auto 40px; color: #666;">Create
+                            your
+                            digital health identity in minutes</p>
+
+                        <form id="abhaForm" class="abha-form">
+                            <div class="form-group">
+                                <label for="registrationType">Choose Registration Method</label>
+                                <select id="registrationType" class="form-control" required>
+                                    <option value="">Select Method</option>
+                                    <option value="phone">Phone Number</option>
+                                    <option value="aadhaar">Aadhaar Number</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" id="phoneGroup" style="display: none;">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phoneNumber" class="form-control"
+                                    placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" maxlength="10">
+                            </div>
+
+                            <div class="form-group" id="aadhaarGroup" style="display: none;">
+                                <label for="aadhaarNumber">Aadhaar Number</label>
+                                <input type="text" id="aadhaarNumber" class="form-control"
+                                    placeholder="Enter 12-digit Aadhaar number" pattern="[0-9]{12}" maxlength="12">
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="termsAgree" required>
+                                    <span>I agree with the <a href="https://abdm.gov.in/" target="_blank">terms and
+                                            conditions</a></span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="submitBtn" disabled>
+                                <i class="fas fa-arrow-right"></i> Create your ABHA
+                            </button>
+
+                            <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #888;">
+                                Don't have ABHA linked mobile number?
+                                <a href="https://abha.abdm.gov.in/abha/v3/register" target="_blank"
+                                    style="color: var(--color-primary); font-weight: 600;">Use Aadhaar number</a>
+                            </p>
+                        </form>
                     </div>
-                    <div class="abha-details">
-                        <div class="abha-photo">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="abha-info-text">
-                            <h4>Full Name</h4>
-                            <p>Aditya Sharma</p>
-                            <h4>Gender / DOB</h4>
-                            <p>Male / 15-08-1992</p>
-                        </div>
+                </div>
+
+                <!-- Video Section -->
+                <div class="hero-video-section">
+                    <div class="video-container-hero" id="videoContainer">
+                        <iframe id="abhaVideo" width="100%" height="400"
+                            src="https://www.youtube.com/embed/dw6qSD8AaxQ?enablejsapi=1&mute=1"
+                            title="ABHA Health ID Explanation" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
-                    <div class="abha-number">91-2345-6789-0123</div>
+                    <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.95rem;">
+                        <i class="fas fa-play-circle" style="color: var(--color-primary);"></i>
+                        Hover to play the video
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Video Section -->
-    <section class="video-section">
+    <section class="video-section" style="display: none;">
         <div class="container">
             <h2 class="section-title">Learn About ABHA</h2>
             <p style="text-align: center; max-width: 700px; margin: -30px auto 50px; font-size: 1.1rem; color: #666;">
@@ -197,58 +245,6 @@
                         <p>Participate at your own will. You can opt-out and request to erase data anytime.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABHA Registration Form -->
-    <section class="abha-registration">
-        <div class="container">
-            <div class="registration-card">
-                <h2 class="registration-title">Generate Your ABHA Number</h2>
-                <p style="text-align: center; max-width: 600px; margin: -20px auto 40px; color: #666;">Create your
-                    digital health identity in minutes</p>
-
-                <form id="abhaForm" class="abha-form">
-                    <div class="form-group">
-                        <label for="registrationType">Choose Registration Method</label>
-                        <select id="registrationType" class="form-control" required>
-                            <option value="">Select Method</option>
-                            <option value="phone">Phone Number</option>
-                            <option value="aadhaar">Aadhaar Number</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group" id="phoneGroup" style="display: none;">
-                        <label for="phoneNumber">Phone Number</label>
-                        <input type="tel" id="phoneNumber" class="form-control"
-                            placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" maxlength="10">
-                    </div>
-
-                    <div class="form-group" id="aadhaarGroup" style="display: none;">
-                        <label for="aadhaarNumber">Aadhaar Number</label>
-                        <input type="text" id="aadhaarNumber" class="form-control"
-                            placeholder="Enter 12-digit Aadhaar number" pattern="[0-9]{12}" maxlength="12">
-                    </div>
-
-                    <div class="form-group checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="termsAgree" required>
-                            <span>I agree with the <a href="https://abdm.gov.in/" target="_blank">terms and
-                                    conditions</a></span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn-submit" id="submitBtn" disabled>
-                        <i class="fas fa-arrow-right"></i> Create your ABHA
-                    </button>
-
-                    <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: #888;">
-                        Don't have ABHA linked mobile number?
-                        <a href="https://abha.abdm.gov.in/abha/v3/register" target="_blank"
-                            style="color: var(--color-primary); font-weight: 600;">Use Aadhaar number</a>
-                    </p>
-                </form>
             </div>
         </div>
     </section>

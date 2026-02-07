@@ -26,9 +26,72 @@
 .abha-hero p {
     font-size: 1.25rem;
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 0 auto 60px;
     color: #555;
     font-weight: 500;
+}
+
+/* Hero Content Grid */
+.hero-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    margin-top: 60px;
+}
+
+.hero-form-section {
+    width: 100%;
+}
+
+.hero-video-section {
+    width: 100%;
+}
+
+.registration-card-hero {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.registration-card-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    background: url('https://raw.githubusercontent.com/AashviNara/DevoCare/main/images/abha-card-bg.png') no-repeat center;
+    background-size: contain;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.registration-card-hero>* {
+    position: relative;
+    z-index: 1;
+}
+
+.video-container-hero {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.video-container-hero:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.video-container-hero iframe {
+    display: block;
+    border-radius: 20px;
 }
 
 /* ABHA Card Mockup */
@@ -433,6 +496,15 @@
     }
 
     .registration-card {
+        padding: 30px 25px;
+    }
+
+    .hero-content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .registration-card-hero {
         padding: 30px 25px;
     }
 }
