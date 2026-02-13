@@ -135,7 +135,7 @@
 .accessibility-toolbar {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   border-bottom: 1px solid #e0e0e0;
-  padding: 8px 0;
+  padding: 5px 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -148,7 +148,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .text-size-controls {
@@ -160,14 +160,14 @@
 .accessibility-btn {
   background: white;
   border: 1px solid #ddd;
-  padding: 6px 10px;
+  padding: 3px 8px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--color-dark);
-  min-width: 38px;
+  min-width: 28px;
 }
 
 .accessibility-btn:hover {
@@ -191,12 +191,12 @@
   gap: 6px;
   background: white;
   border: 1px solid #ddd;
-  padding: 6px 10px;
+  padding: 3px 8px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--color-dark);
 }
 
@@ -218,17 +218,17 @@
 .language-selector select {
   background: white;
   border: 1px solid #ddd;
-  padding: 6px 28px 6px 10px;
+  padding: 4px 22px 4px 8px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--color-dark);
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a1a1a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%231a1a1a' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 10px center;
+  background-position: right 6px center;
 }
 
 .language-selector select:hover {
