@@ -16,6 +16,12 @@
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.08);
     --gradient-primary: linear-gradient(135deg, #0056b3 0%, #6366f1 100%);
+
+    /* Night Vision Variables */
+    --night-bg: #000000;
+    --night-text-primary: #FFD700;
+    --night-text-secondary: #FF69B4;
+    --night-accent: #00CED1;
 }
 
 /* Dropdown Menu Styles */
@@ -629,4 +635,24 @@ body {
         display: none;
         /* Hide desktop links on mobile until we implement the mobile menu */
     }
+}
+
+/* Night Vision Mode */
+body.night-vision {
+    background-color: var(--night-bg) !important;
+    color: var(--night-text-primary) !important;
+}
+
+body.night-vision .header {
+    background-color: #1a1a1a !important;
+    box-shadow: 0 2px 15px rgba(255, 215, 0, 0.1);
+}
+
+body.night-vision .logo-img {
+    mix-blend-mode: normal !important;
+    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
+body.night-vision .nav-link {
+    color: var(--night-text-primary) !important;
 }

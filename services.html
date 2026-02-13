@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services near to ABHA and About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .required {
+            color: #e74c3c;
+            margin-left: 3px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        select {
+            cursor: pointer;
+            background-color: white;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover {
+            border-color: #667eea;
+            background-color: #f8f9ff;
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 12px;
+            margin-top: 3px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            accent-color: #667eea;
+        }
+
+        .radio-option label {
+            margin: 0;
+            cursor: pointer;
+            flex: 1;
+            font-weight: 400;
+        }
+
+        .plan-price {
+            display: block;
+            font-size: 13px;
+            color: #666;
+            margin-top: 3px;
+        }
+
+        .popular-badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-left: 8px;
+            font-weight: 600;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .discount-banner {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .radio-option {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Services near to ABHA and About Us</h1>
+            <p>Fill this quick form and get a personalized quote in 24 hours!</p>
+        </div>
+
+        <div class="discount-banner">
+            🎉 26% OFF for First 26 Customers - Limited Slots!
+        </div>
+
+        <form action="https://formspree.io/f/xnjbpype" method="POST">
+
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="fullName">Full Name<span class="required">*</span></label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="form-group">
+                <label for="contact">Contact Number<span class="required">*</span></label>
+                <input type="tel" id="contact" name="contactNumber" required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+                <label for="email">Email Address<span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Clinic/Hospital Name -->
+            <div class="form-group">
+                <label for="clinicName">Clinic/Hospital Name<span class="required">*</span></label>
+                <input type="text" id="clinicName" name="clinicName" required>
+            </div>
+
+            <!-- City -->
+            <div class="form-group">
+                <label for="city">City<span class="required">*</span></label>
+                <input type="text" id="city" name="city" required>
+            </div>
+
+            <!-- Medical Specialization -->
+            <div class="form-group">
+                <label for="specialization">Medical Specialization<span class="required">*</span></label>
+                <select id="specialization" name="specialization" required>
+                    <option value="">Select your specialization</option>
+                    <option value="General Physician">General Physician</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Dermatologist">Dermatologist</option>
+                    <option value="Dentist">Dentist</option>
+                    <option value="Gynecologist">Gynecologist</option>
+                    <option value="Orthopedic">Orthopedic</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Multi-Specialty">Multi-Specialty</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Which Plan -->
+            <div class="form-group">
+                <label>Which plan interests you?<span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="freedom" name="plan" value="Freedom Plan (₹5,919)" required>
+                        <label for="freedom">
+                            Freedom Plan
+                            <span class="plan-price">₹5,919 - Up to 7 Pages</span>
+                        </label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="business" name="plan" value="Business Pro (₹8,879)" required>
+                        <label for="business">
+                            Business Pro <span class="popular-badge">MOST POPULAR</span>
+                            <span class="plan-price">₹8,879 - Up to 12 Pages</span>
+                        </label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="enterprise" name="plan" value="Enterprise (₹14,799)" required>
+                        <label for="enterprise">
+                            Enterprise
+                            <span class="plan-price">₹14,799 - Up to 20 Pages</span>
+                        </label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="notsure" name="plan" value="Not sure - Need help choosing" required>
+                        <label for="notsure">
+                            Not sure - Need help choosing
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Website -->
+            <div class="form-group">
+                <label>Do you currently have a website?<span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="websiteYes" name="currentWebsite" value="Yes" required>
+                        <label for="websiteYes">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="websiteNo" name="currentWebsite" value="No" required>
+                        <label for="websiteNo">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="form-group">
+                <label>When do you need it ready?<span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="weeks2" name="timeline" value="Within 2 weeks" required>
+                        <label for="weeks2">Within 2 weeks</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="month1" name="timeline" value="Within 1 month" required>
+                        <label for="month1">Within 1 month</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="flexible" name="timeline" value="Flexible" required>
+                        <label for="flexible">Flexible</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Time to Call -->
+            <div class="form-group">
+                <label>Best time to call you?<span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="morning" name="bestTime" value="Morning" required>
+                        <label for="morning">Morning (9 AM - 12 PM)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="afternoon" name="bestTime" value="Afternoon" required>
+                        <label for="afternoon">Afternoon (12 PM - 4 PM)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="evening" name="bestTime" value="Evening" required>
+                        <label for="evening">Evening (4 PM - 8 PM)</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Inquiry</button>
+
+            <div class="footer-note">
+                We'll call you within 24 hours. Limited slots for 26% OFF - we'll reserve yours! 🎉
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -243,6 +243,11 @@ body.night-vision {
   color: var(--night-text-primary) !important;
 }
 
+body.night-vision .logo-img {
+  mix-blend-mode: normal !important;
+  filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
 body.night-vision .header {
   background-color: #1a1a1a !important;
   box-shadow: 0 2px 15px rgba(255, 215, 0, 0.1);
