@@ -1,7 +1,80 @@
+/* Logo Section */
+.logo-section {
+    background: var(--color-white);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.logo-container-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    mix-blend-mode: multiply;
+}
+
+/* Broad Blue Navigation Strip */
+.nav-bar-strip {
+    background: var(--color-primary);
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-strip-content {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
+}
+
+.nav-links-wrapper {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-links-wrapper .nav-link {
+    color: white !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+}
+
+.nav-links-wrapper .nav-link:hover,
+.nav-links-wrapper .nav-link.active {
+    opacity: 0.8;
+}
+
+.nav-actions .btn-sm {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    background-color: white !important;
+    color: var(--color-primary) !important;
+    border-radius: 6px;
+}
+
+/* Dropdown Adjustments */
+.nav-bar-strip .dropdown-menu {
+    top: 100%;
+    margin-top: 12px;
+}
+
+.nav-bar-strip .nav-link.has-dropdown::after {
+    color: white;
+}
+
 /* DevoCare ABHA Page Styles */
 
 .abha-hero {
-    padding: 120px 0;
+    padding: 80px 0 120px;
     background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
     text-align: center;
     position: relative;
@@ -504,6 +577,53 @@
 }
 
 @media (max-width: 991px) {
+    .nav-bar-strip {
+        padding: 10px 0;
+    }
+
+    .nav-strip-content {
+        justify-content: space-between !important;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-primary);
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: var(--transition);
+        z-index: 999;
+        gap: 15px;
+        display: flex;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        color: white !important;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        color: white;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+    }
+
     .steps-grid {
         grid-template-columns: 1fr 1fr;
     }
