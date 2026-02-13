@@ -649,8 +649,8 @@ body.night-vision .header {
 }
 
 body.night-vision .logo-img {
-    mix-blend-mode: normal !important;
-    filter: brightness(0) invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+    mix-blend-mode: screen !important;
+    filter: invert(1) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
 }
 
 body.night-vision .nav-link {
