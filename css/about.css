@@ -163,10 +163,10 @@ body {
 
 /* Header/Nav */
 .header {
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
-    padding: 1.2rem 0;
+    padding: 10px 0;
     position: sticky;
     top: 40px;
     z-index: 1000;
@@ -189,6 +189,45 @@ body {
     object-fit: contain;
     mix-blend-mode: multiply;
     background: transparent;
+}
+
+/* Bottom Navigation Strip (Layer 3) */
+.bottom-nav-strip {
+    background-color: var(--color-primary);
+    padding: 8px 0;
+    position: sticky;
+    top: 140px;
+    /* 40px (toolbar) + ~100px (header) */
+    z-index: 998;
+    color: white;
+}
+
+.strip-content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.strip-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.strip-link {
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+}
+
+.strip-link:hover {
+    opacity: 0.8;
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-links {
@@ -237,9 +276,9 @@ body {
 
 /* About Hero */
 .about-hero {
-    padding: 120px 0;
-    background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
-    text-align: center;
+    padding: 80px 0 100px;
+    /* Reduced since header is sticky and strip is below */
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
     position: relative;
     animation: fadeInUp 0.8s ease-out;
 }
