@@ -15,13 +15,103 @@
 
 <body>
 
-    <a href="about.html" class="nav-link">About Us</a>
+    <!-- Global Top Bar -->
+    <div class="accessibility-toolbar">
+        <div class="container toolbar-content">
+            <nav class="toolbar-left">
+                <a href="mailto:connect@devocare.com" class="toolbar-link">
+                    <i class="fas fa-headset"></i> SUPPORT
+                </a>
+                <a href="services.html" class="toolbar-link">
+                    <i class="fas fa-concierge-bell"></i> SERVICES
+                </a>
+            </nav>
+
+            <div class="toolbar-right">
+                <div class="text-size-controls">
+                    <button class="accessibility-btn text-size-btn" data-size="0.9"
+                        title="Decrease text size">-A</button>
+                    <button class="accessibility-btn text-size-btn" data-size="1" title="Normal text size">A</button>
+                    <button class="accessibility-btn text-size-btn active" data-size="1.15"
+                        title="Increase text size">A+</button>
+                </div>
+
+                <button class="vision-toggle" id="visionToggle" title="Toggle Day/Night Vision">
+                    <i class="fas fa-sun"></i>
+                    <span>Day Vision</span>
+                </button>
+
+                <div class="language-selector">
+                    <select id="languageSelector" title="Select Language">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी (Hindi)</option>
+                        <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                        <option value="ta">தமிழ் (Tamil)</option>
+                        <option value="te">తెలుగు (Telugu)</option>
+                        <option value="bn">বাংলা (Bengali)</option>
+                        <option value="mr">मराठी (Marathi)</option>
+                        <option value="gu">ગુજરાતી (Gujarati)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
-    <button class="mobile-menu-btn">
-        <i class="fas fa-bars"></i>
-    </button>
-    </nav>
-    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="DevoCare Logo" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <div class="dropdown">
+                        <a href="about.html#emr" class="nav-link has-dropdown">Products</a>
+                        <div class="dropdown-menu">
+                            <a href="javascript:void(0)" onclick="navigateTo('emr')" class="dropdown-item">
+                                <i class="fas fa-laptop-medical"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Smart EMR</h5>
+                                    <p>Digitize patient records with a click.</p>
+                                </div>
+                            </a>
+                            <a href="javascript:void(0)" onclick="navigateTo('patient')" class="dropdown-item">
+                                <i class="fas fa-user-circle"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Patient Portal</h5>
+                                    <p>Access health records anywhere.</p>
+                                </div>
+                            </a>
+
+                            <a href="/go-emr-inventory/" class="dropdown-item">
+                                <i class="fas fa-boxes"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Inventory Management</h5>
+                                    <p>Optimize stock & reduce wastage.</p>
+                                </div>
+                            </a>
+
+                            <a href="about.html#portal" class="dropdown-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div class="dropdown-item-content">
+                                    <h5>Clinic Analytics</h5>
+                                    <p>Data-driven insights for growth.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="abha.html" class="nav-link" style="color: var(--color-primary);">ABHA</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
     </header>
 
     <!-- ABHA Hero -->

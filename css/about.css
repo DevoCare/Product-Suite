@@ -161,82 +161,174 @@ body {
     padding: 0 20px;
 }
 
-/* Logo Section */
-.logo-section {
-    background: var(--color-white);
-    padding: 15px 0;
-    text-align: center;
-}
-
-.logo-container-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-img {
-    height: 80px;
-    width: auto;
-    mix-blend-mode: multiply;
-}
-
-/* Broad Blue Navigation Strip */
-.nav-bar-strip {
+/* Global Top Bar (Toolbar Overhaul) */
+.accessibility-toolbar {
     background: var(--color-primary);
-    padding: 12px 0;
-    position: sticky;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 0;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1100;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.nav-strip-content {
+.toolbar-content {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center;
 }
 
-.nav-links-wrapper {
+.toolbar-left,
+.toolbar-right {
     display: flex;
-    gap: 35px;
+    align-items: center;
+    gap: 20px;
+}
+
+.toolbar-link {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    opacity: 0.9;
+}
+
+.toolbar-link:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+/* Accessibility Buttons on Blue */
+.accessibility-btn,
+.vision-toggle {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    padding: 4px 10px !important;
+    font-size: 0.75rem !important;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.accessibility-btn:hover,
+.vision-toggle:hover {
+    background: white !important;
+    color: var(--color-primary) !important;
+    border-color: white !important;
+}
+
+.accessibility-btn.active {
+    background: white !important;
+    color: var(--color-primary) !important;
+}
+
+.language-selector select {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    padding: 4px 28px 4px 10px !important;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.language-selector select:hover {
+    background-color: white !important;
+    color: var(--color-primary) !important;
+}
+
+.language-selector select option {
+    color: var(--color-dark);
+}
+
+/* Header/Nav Adjustments */
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 42px;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.nav-links-wrapper .nav-link {
-    color: white !important;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    background: transparent;
+}
+
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin-left: 2.5rem;
+    text-decoration: none;
     font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+    color: var(--color-dark);
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
     transition: var(--transition);
 }
 
-.nav-links-wrapper .nav-link:hover,
-.nav-links-wrapper .nav-link.active {
-    opacity: 0.8;
+.nav-links a:hover::after {
+    width: 100%;
 }
 
-.nav-actions .btn-sm {
-    padding: 8px 20px;
-    font-size: 0.85rem;
-    background-color: white !important;
-    color: var(--color-primary) !important;
-    border-radius: 6px;
+.nav-links a:hover {
+    color: var(--color-primary);
 }
 
-/* Dropdown Adjustments */
-.nav-bar-strip .dropdown-menu {
-    top: 100%;
-    margin-top: 12px;
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    cursor: pointer;
+    margin-left: 2rem;
 }
 
-.nav-bar-strip .nav-link.has-dropdown::after {
-    color: white;
-}
-
-/* About Hero Offset */
+/* About Hero */
 .about-hero {
-    padding: 80px 0 120px;
+    padding: 120px 0;
     background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
     text-align: center;
     position: relative;
@@ -609,50 +701,6 @@ body {
 
 /* Mobile Responsive */
 @media (max-width: 991px) {
-    .nav-bar-strip {
-        padding: 10px 0;
-    }
-
-    .nav-strip-content {
-        justify-content: space-between !important;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--color-primary);
-        flex-direction: column;
-        padding: var(--spacing-md);
-        box-shadow: var(--shadow-md);
-        transform: translateY(-150%);
-        transition: var(--transition);
-        z-index: 999;
-        gap: 15px;
-        display: flex;
-        /* Override display: none if it was there */
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-    }
-
-    .nav-links .nav-link {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-actions {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        color: white;
-    }
-
     .about-hero h1 {
         font-size: 3rem;
     }
@@ -668,6 +716,15 @@ body {
 
     .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide desktop links on mobile until we implement the mobile menu */
     }
 }
 
